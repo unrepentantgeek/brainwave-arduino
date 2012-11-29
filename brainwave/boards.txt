@@ -1,0 +1,25 @@
+# See: http://code.google.com/p/arduino/wiki/Platforms
+
+##############################################################
+
+BrainWave.name=BrainWave
+
+BrainWave.bootloader.low_fuses=0xDE
+BrainWave.bootloader.high_fuses=0x9A
+BrainWave.bootloader.extended_fuses=0xF7
+BrainWave.bootloader.path=brainwave
+BrainWave.bootloader.file=Brainwave-LUFA-CDC.hex
+
+BrainWave.upload.protocol=avr109
+BrainWave.upload.maximum_size=61440
+BrainWave.upload.speed=115200
+BrainWave.upload.disable_flushing=true
+
+BrainWave.build.mcu=at90usb646
+BrainWave.build.f_cpu=16000000L
+BrainWave.build.core=brainwave
+BrainWave.build.dependency=true
+BrainWave.build.variant=brainwave
+BrainWave.build.vid=0x16D0
+BrainWave.build.pid=0x076B
+

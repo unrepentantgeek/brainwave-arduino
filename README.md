@@ -1,4 +1,6 @@
 brainwave-arduino
 =================
 
-Arduino hardware bundle for Brainwave board
+Arduino bundle for Brainwave
+
+Drop the 'brainwave' directory in your arduino hardware directory and restart Arduino.
