@@ -2,24 +2,24 @@
 
 ##############################################################
 
-BrainWave.name=BrainWave
+Brainwave.name=Brainwave
 
-BrainWave.bootloader.low_fuses=0xDE
-BrainWave.bootloader.high_fuses=0x9A
-BrainWave.bootloader.extended_fuses=0xF7
-BrainWave.bootloader.path=brainwave
-BrainWave.bootloader.file=Brainwave-LUFA-CDC.hex
+Brainwave.bootloader.low_fuses=0xDE
+Brainwave.bootloader.high_fuses=0x9A
+Brainwave.bootloader.extended_fuses=0xF7
+Brainwave.bootloader.path=brainwave
+Brainwave.bootloader.file=Brainwave-LUFA-CDC.hex
 
-BrainWave.upload.protocol=avr109
-BrainWave.upload.maximum_size=61440
-BrainWave.upload.speed=115200
-BrainWave.upload.disable_flushing=true
+Brainwave.upload.protocol=avr109
+Brainwave.upload.maximum_size=61440
+Brainwave.upload.speed=115200
+Brainwave.upload.disable_flushing=true
 
-BrainWave.build.mcu=at90usb646
-BrainWave.build.f_cpu=16000000L
-BrainWave.build.core=brainwave
-BrainWave.build.dependency=true
-BrainWave.build.variant=brainwave
-BrainWave.build.vid=0x16D0
-BrainWave.build.pid=0x076B
+Brainwave.build.mcu=at90usb646
+Brainwave.build.f_cpu=16000000L
+Brainwave.build.core=brainwave
+Brainwave.build.dependency=true
+Brainwave.build.variant=brainwave
+Brainwave.build.vid=0x16D0
+Brainwave.build.pid=0x076B
 
