@@ -54,6 +54,8 @@ static const uint8_t A5 = 43;   // F5
 static const uint8_t A6 = 44;	// F6
 static const uint8_t A7 = 45;	// F7
 
+#define analogInputToDigitalPin(p)  ((p < 16) ? (p) + 54 : -1)
+
 // Pins below still needs to be configured - Hubbe.
 
 #define digitalPinToPCICR(p)    ((((p) >= 8 && (p) <= 11) || ((p) >= 14 && (p) <= 17) || ((p) >= A8 && (p) <= A10)) ? (&PCICR) : ((uint8_t *)0))

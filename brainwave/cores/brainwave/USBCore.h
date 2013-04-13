@@ -18,6 +18,10 @@
 #ifndef __USBCORE_H__
 #define __USBCORE_H__
 
+#define USB_VID 0x16D0
+#define USB_PID 0x076B
+
+
 //	Standard requests
 #define GET_STATUS			0
 #define CLEAR_FEATURE		1
