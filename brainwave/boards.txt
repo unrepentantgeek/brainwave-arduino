@@ -4,11 +4,11 @@
 
 Brainwave.name=Brainwave
 
-Brainwave.bootloader.low_fuses=0xDE
-Brainwave.bootloader.high_fuses=0x9A
-Brainwave.bootloader.extended_fuses=0xF7
+Brainwave.bootloader.low_fuses=0xFF
+Brainwave.bootloader.high_fuses=0x99
+Brainwave.bootloader.extended_fuses=0xF0
 Brainwave.bootloader.path=brainwave
-Brainwave.bootloader.file=Brainwave-LUFA-CDC.hex
+Brainwave.bootloader.file=Brainwave-646-LUFA.hex
 
 Brainwave.upload.protocol=avr109
 Brainwave.upload.maximum_size=61440
@@ -22,4 +22,25 @@ Brainwave.build.dependency=true
 Brainwave.build.variant=brainwave
 Brainwave.build.vid=0x16D0
 Brainwave.build.pid=0x076B
+
+Brainwave2.name=Brainwave 2
+
+Brainwave2.bootloader.low_fuses=0xFF
+Brainwave2.bootloader.high_fuses=0x9b
+Brainwave2.bootloader.extended_fuses=0xF0
+Brainwave2.bootloader.path=brainwave
+Brainwave2.bootloader.file=Brainwave2-1286-LUFA.hex
+
+Brainwave2.upload.protocol=avr109
+Brainwave2.upload.maximum_size=126976
+Brainwave2.upload.speed=115200
+Brainwave2.upload.disable_flushing=true
+
+Brainwave2.build.mcu=at90usb1286
+Brainwave2.build.f_cpu=16000000L
+Brainwave2.build.core=brainwave
+Brainwave2.build.dependency=true
+Brainwave2.build.variant=brainwave
+Brainwave2.build.vid=0x16D0
+Brainwave2.build.pid=0x076B
 
