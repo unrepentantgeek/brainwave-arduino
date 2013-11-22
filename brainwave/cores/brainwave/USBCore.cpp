@@ -630,8 +630,10 @@ void USBDevice_::attach()
 	_usbConfiguration = 0;
 	UHWCON = 0x01;						// power internal reg
 	USBCON = (1<<USBE)|(1<<FRZCLK);		// clock frozen, usb enabled
-#if defined(__AVR_AT90USB646__) || defined(__AVR_AT90USB1286__)
+#if defined(__AVR_AT90USB646__) || defined(__AVR_AT90USB647__)
 	PLLCSR = 0x1A;						// Need 16 MHz xtal
+#if defined(__AVR_AT90USB1286__) || defined(__AVR_AT90USB1287__)
+	PLLCSR = 0x16;						// Need 16 MHz xtal
 #else
 	PLLCSR = 0x12;						// Need 16 MHz xtal
 #endif
