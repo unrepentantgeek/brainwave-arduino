@@ -28,6 +28,9 @@
 
 #include <avr/pgmspace.h>
 
+#define NUM_DIGITAL_PINS            48
+#define NUM_ANALOG_INPUTS           8
+
 #define TX_RX_LED_INIT		DDRE |= (1<<7)
 #define TXLED0			0
 #define TXLED1			0
