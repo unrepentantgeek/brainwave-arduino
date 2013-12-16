@@ -31,11 +31,11 @@
 #define NUM_DIGITAL_PINS            48
 #define NUM_ANALOG_INPUTS           8
 
-#define TX_RX_LED_INIT		DDRE |= (1<<7)
+#define TX_RX_LED_INIT		DDRE |= (1<<0)
 #define TXLED0			0
 #define TXLED1			0
-#define RXLED0			PORTE |= (1<<7)
-#define RXLED1			PORTE &= ~(1<<7)
+#define RXLED0			PORTE |= (1<<0)
+#define RXLED1			PORTE &= ~(1<<0)
 
 static const uint8_t SDA = 0;
 static const uint8_t SCL = 1;
