@@ -212,8 +212,8 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
 
 // TODO(unrepentantgeek) complete this map of PWM capable pins
 const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
-  NOT_ON_TIMER // 0  - PD0 - INT0 - PWM  TODO(unrepentantgeek): figure out which timer
-  NOT_ON_TIMER // 1  - PD1 - INT1 - PWM  TODO(unrepentantgeek): figure out which timer
+  NOT_ON_TIMER, // 0  - PD0 - INT0 - PWM  TODO(unrepentantgeek): figure out which timer
+  NOT_ON_TIMER, // 1  - PD1 - INT1 - PWM  TODO(unrepentantgeek): figure out which timer
   NOT_ON_TIMER, // 2  - PD2 - INT2 - RX
   NOT_ON_TIMER, // 3  - PD3 - INT3 - TX
   NOT_ON_TIMER, // 4  - PD4
@@ -226,9 +226,9 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
   NOT_ON_TIMER, // 11 - PC1
   NOT_ON_TIMER, // 12 - PC2
   NOT_ON_TIMER, // 13 - PC3
-  TIMER3C, // 14 - PC4 - PWM
-  TIMER3B, // 15 - PC5 - PWM
-  TIMER3A, // 16 - PC6 - PWM
+  TIMER3C,      // 14 - PC4 - PWM
+  TIMER3B,      // 15 - PC5 - PWM
+  TIMER3A,      // 16 - PC6 - PWM
   NOT_ON_TIMER, // 17 - PC7
   NOT_ON_TIMER, // 18 - PE6 - INT6
   NOT_ON_TIMER, // 19 - PE7 - INT7
@@ -236,10 +236,10 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
   NOT_ON_TIMER, // 21 - PB1
   NOT_ON_TIMER, // 22 - PB2
   NOT_ON_TIMER, // 23 - PB3
-  TIMER2A // 24 - PB4 - PWM
-  TIMER1A // 25 - PB5 - PWM
-  TIMER1B // 26 - PB6 - PWM
-  NOT_ON_TIMER // 27 - PB7 - PWM  TODO(unrepentantgeek): figure out which timer
+  TIMER2A,      // 24 - PB4 - PWM
+  TIMER1A,      // 25 - PB5 - PWM
+  TIMER1B,      // 26 - PB6 - PWM
+  NOT_ON_TIMER, // 27 - PB7 - PWM  TODO(unrepentantgeek): figure out which timer
   NOT_ON_TIMER, // 28 - PA0
   NOT_ON_TIMER, // 29 - PA1
   NOT_ON_TIMER, // 30 - PA2
