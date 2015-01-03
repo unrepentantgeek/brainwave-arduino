@@ -40,7 +40,7 @@ BrainwavePro.build.mcu=at90usb1286
 BrainwavePro.build.f_cpu=16000000L
 BrainwavePro.build.core=brainwave
 BrainwavePro.build.dependency=true
-BrainwavePro.build.variant=brainwave
+BrainwavePro.build.variant=brainwavepro
 BrainwavePro.build.vid=0x16D0
 BrainwavePro.build.pid=0x076B
 
