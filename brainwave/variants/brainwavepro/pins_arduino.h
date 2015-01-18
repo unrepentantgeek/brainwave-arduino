@@ -4,6 +4,7 @@
 
   Copyright (c) 2007 David A. Mellis
   Modified 2012 by Fredrik Hubinette
+  Modified 2014-2015 by Matthew Wilson
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
@@ -212,8 +213,8 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
 
 // TODO(unrepentantgeek) complete this map of PWM capable pins
 const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
-  NOT_ON_TIMER, // 0  - PD0 - INT0 - PWM  TODO(unrepentantgeek): figure out which timer
-  NOT_ON_TIMER, // 1  - PD1 - INT1 - PWM  TODO(unrepentantgeek): figure out which timer
+  TIMER0A,      // 0  - PD0 - INT0 - PWM
+  TIMER2B,      // 1  - PD1 - INT1 - PWM
   NOT_ON_TIMER, // 2  - PD2 - INT2 - RX
   NOT_ON_TIMER, // 3  - PD3 - INT3 - TX
   NOT_ON_TIMER, // 4  - PD4
@@ -239,7 +240,7 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
   TIMER2A,      // 24 - PB4 - PWM
   TIMER1A,      // 25 - PB5 - PWM
   TIMER1B,      // 26 - PB6 - PWM
-  NOT_ON_TIMER, // 27 - PB7 - PWM  TODO(unrepentantgeek): figure out which timer
+  NOT_ON_TIMER, // 27 - PB7 - PWM  // This should be on TIMER1C
   NOT_ON_TIMER, // 28 - PA0
   NOT_ON_TIMER, // 29 - PA1
   NOT_ON_TIMER, // 30 - PA2
