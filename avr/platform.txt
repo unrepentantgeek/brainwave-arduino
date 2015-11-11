@@ -1,7 +1,7 @@
 name=Brainwave AVR Boards
 version=1.0.0
 
-compiler.path={runtime.tools.avr-gcc.path}/bin/.
+compiler.path={runtime.ide.path}/hardware/tools/avr/bin/
 
 compiler.cpp.cmd=avr-g++
 compiler.cpp.flags=-c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD
