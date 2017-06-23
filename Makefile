@@ -10,7 +10,7 @@ dist:
 	cp -R brainwave $(distdir)/brainwave
 	$(foreach var,$(DISTFILES),cp $(var) $(distdir)/brainwave/$(var);)
 	mkdir $(distdir)/brainwave/cores
-	cd $(distdir) && git clone https://github.com/PaulStoffregen/cores.git && cp -R cores/teensy brainwave/cores/
+	cd $(distdir) && git clone https://github.com/PaulStoffregen/cores.git && cp -R cores/teensy cores/usb_* brainwave/cores/
 	-chmod -R a+r $(distdir)
 	cd $(distdir) && tar Jcvf ../$(TXZFILE) brainwave
 	-rm -rf $(distdir)
