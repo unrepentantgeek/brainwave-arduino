@@ -3,42 +3,60 @@
 ##############################################################
 
 Brainwave.name=Brainwave
+Brainwave.vid0=0x16D0
+Brainwave.pid0=0x076B
 
 Brainwave.bootloader.low_fuses=0xFF
 Brainwave.bootloader.high_fuses=0x99
 Brainwave.bootloader.extended_fuses=0xF0
-Brainwave.bootloader.path=brainwave
-Brainwave.bootloader.file=Brainwave-646-LUFA.hex
+Brainwave.bootloader.file=brainwave/Brainwave-646-LUFA.hex
+Brainwave.bootloader.tool=arduino:avrdude
 
 Brainwave.upload.protocol=avr109
 Brainwave.upload.maximum_size=61440
 Brainwave.upload.speed=115200
 Brainwave.upload.disable_flushing=true
+Brainwave.upload.tool=arduino:avrdude
 
 Brainwave.build.mcu=at90usb646
 Brainwave.build.f_cpu=16000000L
-Brainwave.build.core=brainwave
+Brainwave.build.usb_manufacturer="Brainwave"
+Brainwave.build.usb_product="Brainwave"
+Brainwave.build.board=AVR_BRAINWAVE
+Brainwave.build.core=teensy
+Brainwave.build.usbtype=USB_SERIAL
+Brainwave.build.keylayout=US_ENGLISH
+Brainwave.build.extra_flags={build.usb_flags}
 Brainwave.build.dependency=true
 Brainwave.build.variant=brainwave
 Brainwave.build.vid=0x16D0
 Brainwave.build.pid=0x076B
 
 BrainwavePro.name=Brainwave Pro
+BrainwavePro.vid0=0x16D0
+BrainwavePro.pid0=0x076B
 
 BrainwavePro.bootloader.low_fuses=0xFF
 BrainwavePro.bootloader.high_fuses=0x9b
 BrainwavePro.bootloader.extended_fuses=0xF0
-BrainwavePro.bootloader.path=brainwave
-BrainwavePro.bootloader.file=BrainwavePro-1286-LUFA.hex
+BrainwavePro.bootloader.file=brainwave/BrainwavePro-1286-LUFA.hex
+BrainwavePro.bootloader.tool=arduino:avrdude
 
 BrainwavePro.upload.protocol=avr109
 BrainwavePro.upload.maximum_size=126976
 BrainwavePro.upload.speed=115200
 BrainwavePro.upload.disable_flushing=true
+BrainwavePro.upload.tool=arduino:avrdude
 
 BrainwavePro.build.mcu=at90usb1286
 BrainwavePro.build.f_cpu=16000000L
-BrainwavePro.build.core=brainwave
+BrainwavePro.build.usb_manufacturer="Brainwave"
+BrainwavePro.build.usb_product="BrainwavePro"
+BrainwavePro.build.board=AVR_BRAINWAVEPRO
+BrainwavePro.build.core=teensy
+BrainwavePro.build.usbtype=USB_SERIAL
+BrainwavePro.build.keylayout=US_ENGLISH
+BrainwavePro.build.extra_flags={build.usb_flags}
 BrainwavePro.build.dependency=true
 BrainwavePro.build.variant=brainwavepro
 BrainwavePro.build.vid=0x16D0
