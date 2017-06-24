@@ -1,18 +1,31 @@
-VERSION		= 1.0.0
+#!/bin/sh
 
-DISTFILES	= Brainwave.inf license.txt
-distdir		= brainwave-avr-$(VERSION)
-BZ2FILE		= brainwave-avr-$(VERSION).tar.bz2
+version=1.0.0
+distfiles="Brainwave.inf license.txt"
+distdir=brainwave-avr-"$version"
+bz2file=brainwave-avr-"$version".tar.bz2
 
-dist:
-	rm -rf $(distdir)
-	mkdir $(distdir)
-	cp -R brainwave $(distdir)/brainwave
-	$(foreach var,$(DISTFILES),cp $(var) $(distdir)/brainwave/$(var);)
-	mkdir $(distdir)/brainwave/cores
-	cd $(distdir) && git clone https://github.com/PaulStoffregen/cores.git && cp -R cores/teensy cores/usb_* brainwave/cores/
-	cp /usr/share/arduino/hardware/arduino/avr/platform.txt $(distdir)/brainwave/
-	-chmod -R a+r $(distdir)
-	cd $(distdir) && tar jcvf ../$(BZ2FILE) brainwave
-	-rm -rf $(distdir)
-	sed -e "s/@VERSION@/$(VERSION)/; s/@ARCHIVE@/$(BZ2FILE)/; s/@SHA256SUM@/$(shell sha256sum $(BZ2FILE) | cut -f1 -d' ')/; s/@SIZE@/$(shell stat -c %s $(BZ2FILE))/" < package_brainwave-avr_index.json.in > package_brainwave-avr_index.json
+rm -rf "$distdir"
+mkdir "$distdir"
+# Include the brainwave bundle
+cp -R brainwave "$distdir"/brainwave
+cp $distfiles "$distdir"/brainwave/
+# Include the upstream teensy core
+mkdir "$distdir"/brainwave/cores
+pushd "$distdir"
+  git clone https://github.com/PaulStoffregen/cores.git 
+  cp -R cores/teensy cores/usb_* brainwave/cores/
+popd
+# Include platform.txt from upstream Arduino (this is sloppy)
+cp /usr/share/arduino/hardware/arduino/avr/platform.txt "$distdir"/brainwave/
+
+chmod -R a+r "$distdir"
+pushd "$distdir"
+  tar jcvf ../"$bz2file" brainwave
+popd
+
+rm -rf "$distdir"
+sed -e "s/@VERSION@/$version/; 
+        s/@ARCHIVE@/$bz2file/; 
+        s/@SHA256SUM@/$(sha256sum $bz2file | cut -f1 -d' ')/; 
+        s/@SIZE@/$(stat -c %s $bz2file)/" < package_brainwave-avr_index.json.in > package_brainwave-avr_index.json
